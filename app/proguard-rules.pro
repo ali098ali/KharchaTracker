@@ -1,0 +1,4 @@
+-keep class com.kharcha.tracker.data.local.entity.** { *; }
+-keep class * extends androidx.room.RoomDatabase
+-dontwarn androidx.room.paging.**
+-keepclassmembers class * extends androidx.datastore.preferences.core.Preferences { *; }

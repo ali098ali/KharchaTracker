@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:orientation="horizontal">
+            <ImageButton android:id="@+id/btn_prev" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_previous" android:background="?attr/selectableItemBackgroundBorderless" app:tint="@color/primary"/>
+            <TextView android:id="@+id/tv_month" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center" android:textStyle="bold" android:textColor="@color/text_primary"/>
+            <ImageButton android:id="@+id/btn_next" android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_next" android:background="?attr/selectableItemBackgroundBorderless" app:tint="@color/primary"/>
+        </LinearLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:columnCount="2" android:layout_marginTop="8dp">
+            <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:text="Expense" android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tv_expense" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/expense_red" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:text="Income" android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tv_income" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/success_green" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:text="Balance" android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tv_balance" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/primary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                    <TextView android:text="Savings" android:textSize="12sp" android:textColor="@color/text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tv_savings" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/success_green" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Category Breakdown" android:textStyle="bold" android:layout_marginTop="12dp" android:textColor="@color/text_primary"/>
+        <TextView android:id="@+id/tv_pie_empty" android:layout_width="match_parent" android:layout_height="120dp" android:gravity="center" android:text="No data" android:visibility="gone" android:textColor="@color/text_hint"/>
+        <com.github.mikephil.charting.charts.PieChart android:id="@+id/pie_chart" android:layout_width="match_parent" android:layout_height="240dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Spending" android:textStyle="bold" android:layout_marginTop="12dp" android:textColor="@color/text_primary"/>
+        <TextView android:id="@+id/tv_bar_empty" android:layout_width="match_parent" android:layout_height="120dp" android:gravity="center" android:text="No data" android:visibility="gone" android:textColor="@color/text_hint"/>
+        <com.github.mikephil.charting.charts.BarChart android:id="@+id/bar_chart" android:layout_width="match_parent" android:layout_height="220dp"/>
+    </LinearLayout>
+</ScrollView>

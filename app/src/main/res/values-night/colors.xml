@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#14B8A6</color>
+    <color name="primary_dark">#0D9488</color>
+    <color name="secondary">#FB923C</color>
+    <color name="background">#0F172A</color>
+    <color name="surface">#1E293B</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_hint">#64748B</color>
+    <color name="expense_red">#F87171</color>
+    <color name="success_green">#4ADE80</color>
+    <color name="divider">#334155</color>
+</resources>
